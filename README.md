@@ -1,8 +1,8 @@
 # Binarization Formulations for FCT and CMST
 
-This repository contains the Mathematical Programming (LP) instances and computational results for various binarization formulations applied to two problem classes: the **Fixed Charge Transportation Problem (FCT)** and the **Capacitated Minimum Spanning Tree (CMST)**.
+This repository contains the Mathematical Programming (LP) instances and computational results using CPLEX and Gurobi for various binarization formulations applied to two problem classes: the **Fixed Charge Transportation Problem (FCT)** and the **Capacitated Minimum Spanning Tree (CMST)**.
 
-## 🧪 Problem Classes & Datasets
+## Problem Classes & Datasets
 
 ### Fixed Charge Transportation (FCT)
 We use a dataset of **20 randomly generated instances** for the FCT experiments.
@@ -17,8 +17,8 @@ We utilize **20 CMST instances from the OR-Library (ORLIB)** for the CMST experi
 * **Vertices:** $n = 80$ non-root vertices.
 * **Demands & Capacity:** All vertices have unitary demands with a vehicle capacity of $C = 5$.
 
-## 📐 Formulations Considered
-The LP files in this repository correspond to the following binarization techniques:
+## Formulations Considered
+The LP files in this repository correspond to the following formulations:
 
 | Abbreviation | Formulation Description |
 | :--- | :--- |
@@ -27,20 +27,8 @@ The LP files in this repository correspond to the following binarization techniq
 | **AvV** | Full Binarization with Strengthening |
 | **UnaryB<sup>+</sup>** | Unary Binarization with Strengthening |
 | **LogB<sup>+</sup>** | Logarithmic Binarization with Strengthening |
-| **AvV-z** | AvV formulation with specific variable reductions |
-| **AvV+U** | AvV formulation with additional valid inequalities |
-| **AvV+U-z** | Combined strengthening and reduction formulation |
-
-## 📂 Repository Structure
-The repository is organized into a four-level hierarchy to separate instances by problem class, formulation type, and the presence of cuts.
-
-
-
-```text
-/ (Root)
-├── TABLES.md              # Detailed computational results (CPLEX & Gurobi)
-├── data instances/        # Main data directory
-│   ├── [Problem Class]/   # FCT or CMST
-│   │   ├── [Formulation]/ # e.g., AvV, LogB+, etc.
-│   │   │   ├── Base/      # Standard LP instances
-│   │   │   └── WithCuts/  # Instances with formulation cuts added
+| **AvV-z** | AvV formulation with the flow constraints in terms of binary $z$ variables removed. |
+| **AvV+U** | AvV formulation where new general integer variables are introduced
+to link equally sized flows from all supply (resp. demand) nodes into a single demand (resp. supply)
+node. |
+| **AvV+U-z** | AvV+U formulation with the flow constraints in terms of binary $z$ variables removed. |
