@@ -28,7 +28,7 @@ The LP files in this repository correspond to the following formulations:
 | **UnaryB<sup>+</sup>** | Unary Binarization with Strengthening |
 | **LogB<sup>+</sup>** | Logarithmic Binarization with Strengthening |
 | **AvV-z** | AvV formulation with the flow constraints in terms of binary $z$ variables removed. |
-| **AvV+U** | AvV formulation where new general integer variables are introduced
-to link equally sized flows from all supply (resp. demand) nodes into a single demand (resp. supply)
-node. |
+| **AvV+U** | AvV formulation where new general integer variables are introduced to link equally sized flows from all supply (resp. demand) nodes into a single demand (resp. supply) node. |
 | **AvV+U-z** | AvV+U formulation with the flow constraints in terms of binary $z$ variables removed. |
+
+The results, including comparisons of LP gaps, node counts, and solution times for these formulations, are documented in the TABLES.md file.
