@@ -1,36 +1,63 @@
 # Computational Results
 
-## Table 1: FCT Formulations compared using CPLEX
+## Table 1: FCT formulations compared using CPLEX
 
 | Formulation | Metric | (30, 10) | (30, 20) | (40, 10) | (40, 20) | Avg |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | | **LP gap%** | 13.76 | 14.29 | 12.00 | 15.01 | 13.77 |
-| **FCT** | Root Gap% | 2.42 | 3.39 | 2.15 | 4.51 | 3.12 |
-| | Nodes | 8,980.2 | 21,348.2 | 14,684.2 | 518,699.0 | 140,927.9 |
-| | Time | 7.13 | 19.10 | 21.64 | 1,689.86 | 434.43 |
-| **FullB** | Root Gap% | 0.00 | 0.10 | 0.00 | 0.22 | 0.08 |
-| | Nodes | 0.0 | 14.4 | 0.0 | 386.6 | 100.3 |
-| | Time | 1.65 | 4.09 | 3.96 | 12.91 | 5.65 |
-| **AvV** | Root Gap% | 0.00 | 0.04 | 0.00 | 0.11 | 0.04 |
-| | Nodes | 0.0 | 3.8 | 0.0 | 22.4 | 6.6 |
-| | Time | 0.66 | 1.88 | 1.33 | 4.88 | 2.19 |
-| **UnaryB<sup>+</sup>** | Root Gap% | 7.70 | 10.84 | 8.29 | 12.36 | 9.80 |
-| | Nodes | 964,661.8 | 1,818,001.0 | 1,418,344.6 | 931,969.2 | 1,283,244.2 |
-| | Time | 1,574.17 | 3,601.33 | 3,162.92 | 3,600.52 | 2,984.73 |
-| **LogB<sup>+</sup>** | Root Gap% | 5.58 | 8.17 | 4.90 | 9.57 | 7.06 |
-| | Nodes | 303,996.0 | 1,623,406.6 | 651,503.8 | 1,022,860.6 | 900,441.8 |
-| | Time | 379.38 | 3,364.45 | 1,607.92 | 3,604.00 | 2,238.93 |
-| **AvV - z** | Root Gap% | 2.13 | 3.71 | 2.15 | 4.63 | 3.15 |
-| | Nodes | 3,378.0 | 5,744.0 | 4,830.2 | 67,597.2 | 20,387.4 |
-| | Time | 9.81 | 33.17 | 22.18 | 523.22 | 147.10 |
-| **AvV + U** | Root Gap% | 0.00 | 0.00 | 0.00 | 0.20 | 0.05 |
-| | Nodes | 0.0 | 0.0 | 0.0 | 75.8 | 19.0 |
-| | Time | 0.73 | 1.97 | 1.27 | 4.61 | 2.14 |
-| **AvV + U - z** | Root Gap% | 0.00 | 0.00 | 0.00 | 0.17 | 0.04 |
-| | Nodes | 0.0 | 0.0 | 0.0 | 79.6 | 19.9 |
-| | Time | 0.58 | 1.98 | 1.43 | 5.24 | 2.31 |
+| **FCT** | Root Gap% | 2.42 | 3.31 | 2.18 | 4.57 | 3.12 |
+| | Nodes | 17,933.8 | 44,236.6 | 34,477.0 | 575,597.4 | 168,061.2 |
+| | Time | 7.67 | 16.65 | 19.10 | 857.22 | 225.16 |
+| **FullB** | Root Gap% | 0.00 | 0.07 | 0.02 | 0.16 | 0.06 |
+| | Nodes | 0.0 | 10.2 | 1.8 | 143.8 | 39.0 |
+| | Time | 2.61 | 5.17 | 5.71 | 13.67 | 6.79 |
+| **AvV** | Root Gap% | 0.00 | 0.00 | 0.00 | 0.06 | 0.02 |
+| | Nodes | 0.0 | 0.0 | 0.0 | 7.6 | 1.9 |
+| | Time | 1.06 | 2.50 | 1.66 | 6.13 | 2.84 |
+| **UnaryB<sup>+</sup>** | Root Gap% | 7.71 | 10.85 | 8.31 | 12.36 | 9.81 |
+| | Nodes | 1,090,588.6 | 2,006,986.6 | 1,951,216.0 | 1,338,188.2 | 1,596,744.9 |
+| | Time | 779.09 | 1,802.56 | 1,685.76 | 1,802.12 | 1,517.38 |
+| **LogB<sup>+</sup>** | Root Gap% | 5.51 | 8.40 | 4.94 | 9.17 | 7.00 |
+| | Nodes | 308,450.8 | 1,519,472.4 | 671,691.2 | 943,637.0 | 860,812.8 |
+| | Time | 153.39 | 1,582.00 | 797.44 | 1,808.75 | 1,085.40 |
+| **AvV - z** | Root Gap% | 2.09 | 3.67 | 1.99 | 4.68 | 3.11 |
+| | Nodes | 4,451.0 | 12,630.2 | 8,791.8 | 118,439.6 | 36,078.2 |
+| | Time | 11.13 | 25.80 | 27.72 | 274.89 | 84.89 |
+| **AvV + U** | Root Gap% | 0.00 | 0.00 | 0.00 | 0.11 | 0.03 |
+| | Nodes | 0.0 | 0.0 | 0.0 | 38.2 | 9.6 |
+| | Time | 1.13 | 2.32 | 2.13 | 5.69 | 2.82 |
+| **AvV + U - z** | Root Gap% | 0.00 | 0.00 | 0.00 | 0.18 | 0.04 |
+| | Nodes | 0.0 | 0.0 | 0.0 | 59.0 | 14.8 |
+| | Time | 0.92 | 2.35 | 1.51 | 6.67 | 2.86 |
 
-## Table 2: FCT formulation cut effectiveness comparisons
+## Table 2: FCT: AvV with preprocessing and cuts disabled, using CPLEX
+
+| (n, B, s) | LP gap% | AvV Root gap% | AvV Nodes | AvV Time | AvV w/o preprocessing Root gap% | AvV w/o preprocessing Nodes | AvV w/o preprocessing Time | AvV w/o cuts Root gap% | AvV w/o cuts Nodes | AvV w/o cuts Time |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| (30, 10, 1) | 13.73 | 0.00 | 0 | 0.78 | 0.00 | 0 | 1.76 | 13.53 | 4,723,422 | 607.03 |
+| (30, 10, 2) | 14.35 | 0.00 | 0 | 1.24 | 0.00 | 0 | 1.66 | 14.35 | 3,830,744 | 606.63 |
+| (30, 10, 3) | 15.79 | 0.00 | 0 | 1.27 | 0.10 | 5 | 2.29 | 15.76 | 3,908,377 | 613.09 |
+| (30, 10, 4) | 12.35 | 0.00 | 0 | 0.73 | 0.00 | 0 | 1.17 | 12.24 | 5,178,776 | 600.74 |
+| (30, 10, 5) | 12.61 | 0.00 | 0 | 0.71 | 0.00 | 0 | 1.22 | 12.51 | 3,812,975 | 605.89 |
+| (30, 20, 1) | 15.77 | 0.00 | 0 | 3.75 | 0.17 | 18 | 5.20 | 15.77 | 2,987,522 | 604.57 |
+| (30, 20, 2) | 13.41 | 0.00 | 0 | 1.03 | 0.00 | 0 | 1.88 | 13.41 | 2,372,031 | 604.73 |
+| (30, 20, 3) | 14.04 | 0.00 | 0 | 1.26 | 0.00 | 0 | 1.80 | 14.04 | 2,360,256 | 604.34 |
+| (30, 20, 4) | 13.51 | 0.00 | 0 | 2.73 | 0.49 | 25 | 4.81 | 13.51 | 2,327,046 | 605.15 |
+| (30, 20, 5) | 14.72 | 0.00 | 0 | 2.38 | 0.43 | 9 | 3.89 | 14.72 | 2,549,070 | 604.95 |
+| (40, 10, 1) | 12.62 | 0.00 | 0 | 1.57 | 0.00 | 0 | 1.80 | 12.58 | 2,381,495 | 606.48 |
+| (40, 10, 2) | 14.19 | 0.00 | 0 | 1.91 | 0.07 | 2 | 5.00 | 14.17 | 2,470,891 | 609.72 |
+| (40, 10, 3) | 11.63 | 0.00 | 0 | 1.31 | 0.00 | 0 | 2.25 | 11.63 | 2,380,551 | 607.05 |
+| (40, 10, 4) | 10.32 | 0.00 | 0 | 1.45 | 0.00 | 0 | 2.00 | 10.31 | 2,528,256 | 605.13 |
+| (40, 10, 5) | 11.22 | 0.01 | 0 | 1.76 | 0.00 | 0 | 1.93 | 11.21 | 2,347,153 | 605.96 |
+| (40, 20, 1) | 14.62 | 0.00 | 0 | 4.49 | 0.09 | 3 | 7.27 | 14.62 | 1,339,585 | 605.93 |
+| (40, 20, 2) | 16.59 | 0.11 | 7 | 6.60 | 0.16 | 10 | 10.79 | 16.59 | 1,180,388 | 604.28 |
+| (40, 20, 3) | 16.45 | 0.00 | 0 | 7.58 | 0.44 | 329 | 12.25 | 16.45 | 1,338,916 | 605.32 |
+| (40, 20, 4) | 12.04 | 0.01 | 0 | 4.57 | 0.46 | 132 | 8.07 | 12.04 | 1,552,836 | 605.05 |
+| (40, 20, 5) | 15.35 | 0.18 | 31 | 9.19 | 0.43 | 210 | 11.95 | 15.35 | 1,608,142 | 603.56 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Average** | **13.77** | **0.02** | **1.9** | **2.82** | **0.14** | **37.1** | **4.45** | **13.74** | **2,658,921.6** | **605.78** |
+
+## Table 3: FCT formulation cut effectiveness comparisons
 
 | (n, B, s) | LP gap% | Root gap% | FullB LP Gap% w. cuts | FullB Cuts Added | FullB with GMI cuts LP Gap% w. cuts | FullB with GMI cuts Cuts Added | AvV LP Gap% w. cuts | AvV Cuts Added | AvV-z LP Gap% w. cuts | AvV-z Cuts Added | UnaryB<sup>+</sup> LP Gap% w. cuts | UnaryB<sup>+</sup> Cuts Added | LogB<sup>+</sup> LP Gap% w. cuts | LogB<sup>+</sup> Cuts Added | AvV+U LP Gap% w. cuts | AvV+U Cuts Added | AvV+U-z LP Gap% w. cuts | AvV+U-z Cuts Added |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -57,7 +84,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Average** | **13.77** | **0.24** | **13.77** | **150.9** | **13.05** | **249.55** | **1.32** | **191.1** | **13.77** | **0** | **13.77** | **0** | **13.77** | **133.25** | **1.33** | **352.5** | **2.96** | **131.35** |
 
-## Table 3: CMST formulation cut effectiveness comparisons
+## Table 4: CMST formulation cut effectiveness comparisons
 
 | Instance | LP gap% | Root gap% | AvV LP Gap% w. cuts | AvV Cuts Added | AvV + U LP Gap% w. cuts | AvV + U Cuts Added | AvV + U - z LP Gap% w. cuts | AvV + U - z Cuts Added |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -74,7 +101,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Average** | **6.40** | **1.11** | **1.20** | **304.1** | **1.20** | **583.3** | **1.39** | **269.3** |
 
-## Table 4: FCT: AvV, MIR, and formulation cuts comparisons using CPLEX
+## Table 5: FCT: AvV, MIR, and formulation cuts comparisons using CPLEX
 
 | (n, B, s) | LP gap% | AvV Root gap% | AvV Nodes | AvV Time | AvV with MIR cuts only Root gap% | AvV with MIR cuts only Nodes | AvV with MIR cuts only Time | AvV with formulation cuts only Root gap% | AvV with formulation cuts only Nodes | AvV with formulation cuts only Time | AvV with formulation and other cuts Root gap% | AvV with formulation and other cuts Nodes | AvV with formulation and other cuts Time |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -101,7 +128,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Average** | **13.77** | **0.02** | **1.9** | **2.82** | **0.50** | **220.5** | **3.18** | **1.22** | **7,317.0** | **5.65** | **0.02** | **5.1** | **1.95** |
 
-## Table 5: CMST: AvV, {0, 1/2}, and formulation cuts comparisons using CPLEX
+## Table 6: CMST: AvV, {0, 1/2}, and formulation cuts comparisons using CPLEX
 
 | Instance | LP gap% | AvV Root gap% | AvV Nodes | AvV Time | AvV with {0, 1/2} cuts only Root gap% | AvV with {0, 1/2} cuts only Nodes | AvV with {0, 1/2} cuts only Time | AvV with formulation cuts only Root gap% | AvV with formulation cuts only Nodes | AvV with formulation cuts only Time | AvV with formulation and other cuts Root gap% | AvV with formulation and other cuts Nodes | AvV with formulation and other cuts Time |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -118,7 +145,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Average** | **6.40** | **1.12** | **20,702.5** | **25.68** | **1.76** | **29,124.4** | **28.05** | **1.20** | **270,071.5** | **76.19** | **0.59** | **18,339.6** | **17.03** |
 
-## Table 6: FCT: AvV, MIR, and formulation cuts comparisons using Gurobi
+## Table 7: FCT: AvV, MIR, and formulation cuts comparisons using Gurobi
 
 | (n, B, s) | LP gap% | AvV Root gap% | AvV Nodes | AvV Time | AvV with MIR cuts only Root gap% | AvV with MIR cuts only Nodes | AvV with MIR cuts only Time | AvV with formulation cuts only Root gap% | AvV with formulation cuts only Nodes | AvV with formulation cuts only Time | AvV with formulation and other cuts Root gap% | AvV with formulation and other cuts Nodes | AvV with formulation and other cuts Time |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -145,7 +172,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Average** | **13.49** | **0.06** | **33.25** | **5.52** | **0.23** | **88.6** | **3.58** | **0.93** | **3,868.7** | **3.70** | **0.02** | **9.7** | **2.74** |
 
-## Table 7: CMST: AvV, MIR, and formulation cuts comparisons using Gurobi
+## Table 8: CMST: AvV, MIR, and formulation cuts comparisons using Gurobi
 
 | Instance | LP gap% | AvV Root gap% | AvV Nodes | AvV Time | AvV with MIR cuts only Root gap% | AvV with MIR cuts only Nodes | AvV with MIR cuts only Time | AvV with formulation cuts only Root gap% | AvV with formulation cuts only Nodes | AvV with formulation cuts only Time | AvV with formulation and other cuts Root gap% | AvV with formulation and other cuts Nodes | AvV with formulation and other cuts Time |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -161,3 +188,30 @@
 | te80-5 | 7.08 | 1.08 | 6,402 | 14.81 | 1.33 | 27,002 | 14.85 | 2.36 | 417,130 | 73.77 | 1.23 | 15,636 | 36.15 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Average** | **6.37** | **0.69** | **13,885.6** | **11.29** | **0.94** | **49,089.6** | **14.98** | **1.04** | **183,354.1** | **31.72** | **0.51** | **11,023.7** | **15.00** |
+
+## Table 9: FCT: AvV with preprocessing and cuts disabled, using Gurobi
+
+| (n, B, s) | LP gap% | AvV Root gap% | AvV Nodes | AvV Time | AvV w/o preprocessing LP gap% | AvV w/o preprocessing Root gap% | AvV w/o preprocessing Nodes | AvV w/o preprocessing Time | AvV w/o cuts Root gap% | AvV w/o cuts Nodes | AvV w/o cuts Time |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| (30, 10, 1) | 12.96 | 0.00 | 0 | 1.46 | 13.73 | 0.00 | 0 | 1.30 | 12.77 | 10,030,791 | 600.07 |
+| (30, 10, 2) | 14.16 | 0.00 | 0 | 2.86 | 14.34 | 0.04 | 2 | 1.58 | 13.26 | 10,705,591 | 600.04 |
+| (30, 10, 3) | 15.29 | 0.00 | 0 | 2.42 | 15.78 | 0.16 | 29 | 1.54 | 14.76 | 8,555,959 | 600.05 |
+| (30, 10, 4) | 11.95 | 0.00 | 0 | 1.56 | 12.33 | 0.00 | 0 | 1.20 | 10.92 | 3,022,234 | 207.89 |
+| (30, 10, 5) | 12.54 | 0.00 | 0 | 1.19 | 12.60 | 0.00 | 0 | 1.42 | 11.53 | 9,264,335 | 600.03 |
+| (30, 20, 1) | 15.63 | 0.13 | 10 | 6.62 | 15.77 | 0.14 | 5 | 3.35 | 14.86 | 6,651,948 | 600.02 |
+| (30, 20, 2) | 13.31 | 0.00 | 0 | 2.90 | 13.40 | 0.00 | 0 | 2.73 | 12.42 | 5,914,966 | 600.14 |
+| (30, 20, 3) | 13.86 | 0.00 | 0 | 3.29 | 14.04 | 0.00 | 0 | 2.48 | 13.01 | 6,049,580 | 600.02 |
+| (30, 20, 4) | 13.36 | 0.00 | 0 | 4.87 | 13.51 | 0.54 | 87 | 3.36 | 12.72 | 5,924,197 | 600.03 |
+| (30, 20, 5) | 14.48 | 0.00 | 0 | 3.87 | 14.71 | 0.51 | 11 | 2.77 | 13.69 | 7,336,983 | 600.11 |
+| (40, 10, 1) | 12.42 | 0.00 | 0 | 2.65 | 12.62 | 0.00 | 0 | 2.43 | 12.14 | 6,835,474 | 600.03 |
+| (40, 10, 2) | 13.90 | 0.00 | 0 | 4.30 | 14.19 | 0.18 | 60 | 3.36 | 13.11 | 5,503,027 | 600.02 |
+| (40, 10, 3) | 10.90 | 0.00 | 0 | 3.39 | 11.62 | 0.10 | 2 | 2.25 | 10.03 | 4,707,290 | 600.04 |
+| (40, 10, 4) | 9.53 | 0.00 | 0 | 2.04 | 10.31 | 0.00 | 0 | 1.68 | 8.75 | 5,002,893 | 600.05 |
+| (40, 10, 5) | 11.13 | 0.00 | 0 | 2.08 | 11.22 | 0.00 | 0 | 2.21 | 10.32 | 5,702,705 | 600.07 |
+| (40, 20, 1) | 14.58 | 0.01 | 0 | 13.40 | 14.62 | 0.14 | 30 | 7.63 | 13.86 | 2,869,794 | 600.04 |
+| (40, 20, 2) | 16.46 | 0.08 | 4 | 9.90 | 16.59 | 0.23 | 344 | 7.99 | 15.76 | 3,467,064 | 600.04 |
+| (40, 20, 3) | 16.24 | 0.64 | 621 | 11.26 | 16.45 | 0.57 | 126 | 7.69 | 15.51 | 3,425,406 | 600.21 |
+| (40, 20, 4) | 11.71 | 0.38 | 30 | 13.45 | 12.03 | 0.63 | 222 | 6.33 | 11.68 | 2,954,288 | 600.04 |
+| (40, 20, 5) | 15.34 | 0.00 | 0 | 16.94 | 15.34 | 0.37 | 272 | 11.02 | 14.67 | 3,149,229 | 600.02 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Average** | **13.49** | **0.06** | **33.25** | **5.52** | **13.76** | **0.18** | **59.5** | **3.72** | **12.79** | **5,853,687.7** | **580.45** |
